@@ -23,4 +23,6 @@ Route::get('/TambahResep', function () {
     return view('frontend.create.create');
 });
 
+Route::get('/Resep/{resep}',[\App\Http\Controllers\ResepController::class, 'show'])->name('resep.show');
+
 

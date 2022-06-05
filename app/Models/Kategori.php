@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kategori extends Model
 {
-    use HasFactory;
+    public function kategoriasalmasakan() {
+        return $this->hasMany('App\Models\KategoriAsalMasakan', 'kategori_id','id');
+    }
+
+    public function kategorijenismasakan() {
+        return $this->hasMany('App\Models\KategoriJenisMasakan', 'kategori_id','id');
+    }
 }

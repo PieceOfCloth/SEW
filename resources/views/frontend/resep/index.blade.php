@@ -122,7 +122,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">{{ $r -> nama }}</a></h6>
+                                    <h6><a href="{{ route('resep.show', $r->id) }}">{{ $r -> nama }}</a></h6>
                                     <h5><i class="fa fa-heart"></i> {{ $r -> sukai }}&nbsp;&nbsp;<i class="fa fa-comment-o"></i> 5</h5>
                                 </div>
                             </div>

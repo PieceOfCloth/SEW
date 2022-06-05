@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class UserAktivitasResep extends Model
 {
     public function resep() {
-        return $this->belongsTo('App\Resep', 'resep_id');
+        return $this->belongsTo('App\Models\Resep', 'resep_id');
     }
 
     public function user() {
-        return $this->belongsTo('App\User','user_id');
+        return $this->belongsTo('App\Models\User','user_id');
     }
 }

@@ -14,8 +14,8 @@ class ResepController extends Controller
     }
     
     public function show(Resep $resep) {
-        dd($resep);
-
-        return view('frontend.resep.show', compact('data'));
+        return view('frontend.resep.show', [
+            'resep'=>$resep
+        ]);
     }
 }
