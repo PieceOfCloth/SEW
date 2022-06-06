@@ -10,7 +10,14 @@ class ResepController extends Controller
     public function index() {
         $reseps = Resep::all();
 
-        return view('frontend.resep.index', compact('reseps'));
+        $peringkat = Resep::orderByDesc('sukai')
+                    ->take(3)
+                    ->get();
+
+        return view('frontend.resep.index', [
+            'reseps'=>$reseps,
+            'peringkat'=>$peringkat
+        ]);
     }
     
     public function show(Resep $resep) {

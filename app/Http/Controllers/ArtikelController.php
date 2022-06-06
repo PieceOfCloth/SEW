@@ -12,4 +12,10 @@ class ArtikelController extends Controller
 
         return view('frontend.artikel.index', compact('artikels'));
     }
+
+    public function show(Artikel $artikel) {
+        return view('frontend.artikel.show', [
+            'arti'=>$artikel
+        ]);
+    }
 }

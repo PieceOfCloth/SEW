@@ -2,12 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Artikel;
+use App\Models\Resep;
 use Illuminate\Http\Request;
 
 class HomepageController extends Controller
 {
     public function index() {
+        $reseps = Resep::all();
 
-        return view('frontend.homepage');
+        $peringkat = Resep::orderByDesc('sukai')
+                    ->take(6)
+                    ->get();
+
+        return view('frontend.homepage', [
+            'reseps'=>$reseps,
+            'peringkat'=>$peringkat
+        ]);
     }
 }

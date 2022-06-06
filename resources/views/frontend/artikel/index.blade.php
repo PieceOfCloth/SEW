@@ -34,8 +34,8 @@
                                     <ul>
                                         <li><i class="fa fa-user-o"></i> Admin</li>
                                     </ul>
-                                    <h5><a href="#">{{ $a -> judul }}</a></h5>
-                                    <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
+                                    <h5><a href="/Artikel/{{ $a->id }}">{{ $a -> judul }}</a></h5>
+                                    <a href="/Artikel/{{ $a->id }}" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
                                 </div>
                             </div>
                         </div>

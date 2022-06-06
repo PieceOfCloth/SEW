@@ -24,5 +24,6 @@ Route::get('/TambahResep', function () {
 });
 
 Route::get('/Resep/{resep}',[\App\Http\Controllers\ResepController::class, 'show'])->name('resep.show');
+Route::get('/Artikel/{artikel}',[\App\Http\Controllers\ArtikelController::class, 'show'])->name('artikel.show');
 
 
