@@ -24,7 +24,8 @@
         <div class="container">
             <div class="checkout__form">
                 <h4>Form Tambah Resep</h4>
-                <form action="" method="POST" enctype="multipart/form-data" id="usrform">
+                <form action="{{ route('resep.create') }}" method="POST" enctype="multipart/form-data" id="usrform">
+                    @csrf
                     <div class="row">
                         <div class="col-lg-8 col-md-6">
                             <div class="row">
@@ -66,21 +67,26 @@
                             </div>
                             <div class="checkout__input">
                                 <p>Kategori<span>*</span></p>
-                                <select name="Jenis" class="checkout__input__add">
-                                    <option value="Appetizer">Appetizer</option>
-                                    <option value="Main Course">Main Course</option>
-                                    <option value="Desert">Desert</option>
+                                <select name="jenis" class="checkout__input__add">
+                                    <option value="1">Hidangan Pembuka</option>
+                                    <option value="2">Hidangan Utama</option>
+                                    <option value="3">Hidangan Penutup</option>
                                 </select><br><br>
-                                <select name="Asal" class="checkout__input__add">
-                                    <option value="Masakan Indonesia">Masakan Indonesia</option>
-                                    <option value="Masakan India">Masakan India</option>
-                                    <option value="Masakan Italia">Masakan Italia</option>
+                                <select name="asal" class="checkout__input__add">
+                                    <option value="3">Masakan Indonesia</option>
+                                    <option value="2">Masakan India</option>
+                                    <option value="1">Masakan Arab</option>
+                                    <option value="4">Masakan Korea</option>
+                                    <option value="5">Masakan Mesir</option>
+                                    <option value="6">Masakan China</option>
+                                    <option value="7">Masakan Jepang</option>
+                                    <option value="8">Masakan Thailand</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="checkout__order">
-                                <button type="submit" class="site-btn">PLACE ORDER</button>
+                                <button type="submit" class="site-btn">BUAT RESEP</button>
                             </div>
                         </div>
                     </div>

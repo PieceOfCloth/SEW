@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Resep extends Model
 {
+    protected $fillable = [
+        "nama", "url_gambar", "deskripsi", "asal_id", "jenis_id", "user_id"
+    ];
+    public $timestamps = false;
+
     public function useraktivitasresep() {
         return $this->hasMany('App\Models\UserAktivitasResep','resep_id','id');
     }

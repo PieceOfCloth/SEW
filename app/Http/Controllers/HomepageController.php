@@ -15,9 +15,13 @@ class HomepageController extends Controller
                     ->take(6)
                     ->get();
 
+        $artikel = Artikel::take(3)
+                    ->get();
+
         return view('frontend.homepage', [
             'reseps'=>$reseps,
-            'peringkat'=>$peringkat
+            'peringkat'=>$peringkat,
+            'artikel'=>$artikel
         ]);
     }
 }

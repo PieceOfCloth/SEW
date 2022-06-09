@@ -142,7 +142,21 @@
                                     <li><a href="/TambahResep">Tambah Resep</a></li>
                                 </ul>
                             </li>
-                            <li><a href="">Kategori</a></li>
+                            <li><a href="">Kategori</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="/Pembuka">Hidangan Pembuka</a></li>
+                                    <li><a href="/Utama">Hidangan Utama</a></li>
+                                    <li><a href="/Penutup">Hidangan Penutup</a></li>
+                                    <li><a href="/Arab">Masakan Arab</a></li>
+                                    <li><a href="/India">Masakan India</a></li>
+                                    <li><a href="/Indonesia">Masakan Indonesia</a></li>
+                                    <li><a href="/Korea">Masakan Korea</a></li>
+                                    <li><a href="/Mesir">Masakan Mesir</a></li>
+                                    <li><a href="/China">Masakan China</a></li>
+                                    <li><a href="/Jepang">Masakan Jepang</a></li>
+                                    <li><a href="/Thailand">Masakan Thailand</a></li>
+                                </ul>
+                            </li>
                             <li><a href="/Artikel">Artikel</a></li>
                             <!-- <li><a href="./contact.html">Contact</a></li> -->
                         </ul>
